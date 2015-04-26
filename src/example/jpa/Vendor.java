@@ -21,20 +21,47 @@ public class Vendor {
 	
 	@Basic
 	@Column(name = "VENDOR_NAME")
+	private
 	String name;
-
-	@Column(name = "VENDOR_CITY")
-	String city;
+	
+	@Column(name = "VENDOR_DESCRIPTION")
+	private
+	String description;
+	
+	@Column(name = "VENDOR_EMAILID")
+	private 
+	String email_id;
+	
+	@Column(name = "VENDOR_PASSWORD")
+	private
+	String password;
+	
+	@Column(name = "VENDOR_TYPE")
+	private
+	VendorType vendor_type;
+	
+	@Column(name = "VENDOR_ADDRESS")
+	private
+	String address;	
 	
 	@Column(name = "VENDOR_LATITUDE")
+	private
 	String latitude;
 	
 	@Column(name = "VENDOR_LONGITUDE")
+	private
 	String longitude;
 	
 	@Column(name = "VENDOR_PHONE")
 	String phone;
 	
+	@Column(name = "VENDOR_STATE")
+	private
+	String state;
+	
+	@Column(name = "VENDOR_CITY")
+	private
+	String city;
 	
 	//Id
 	public long getId() {
@@ -97,5 +124,53 @@ public class Vendor {
 	@Override
 	public String toString() {
 		return String.format("{\"id\": \"%d\", \"name\": \"%s\", \"city\": \"%s\", \"latitude\": \"%s\", \"longitude\": \"%s\", \"phone\": \"%s\"}", id, name, city, latitude, longitude, phone);
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getEmail_id() {
+		return email_id;
+	}
+
+	public void setEmail_id(String email_id) {
+		this.email_id = email_id;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public VendorType getVendor_type() {
+		return vendor_type;
+	}
+
+	public void setVendor_type(VendorType vendor_type) {
+		this.vendor_type = vendor_type;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 }

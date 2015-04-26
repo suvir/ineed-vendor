@@ -86,7 +86,8 @@ public class VendorListResource {
 			}
 		}
 	}
-
+	
+ // UPDATE function
 	@PUT
 	public Response update(@FormParam("id") long id, @FormParam("name") String name, @FormParam("city") String city, @FormParam("latitude") String latitude, 
 						   @FormParam("longitude") String longitude, @FormParam("phone") String phone) {
